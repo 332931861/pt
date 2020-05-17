@@ -58,7 +58,6 @@ public class SysUser implements Serializable {
     /**
      * 角色ID列表
      */
-
     private List<Long> roleIdList;
 
     /**
