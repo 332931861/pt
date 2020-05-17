@@ -13,7 +13,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>pt</name>
     <description>test project for Spring Boot</description>
-
+    <packaging>jar</packaging>
     <properties>
         <java.version>1.8</java.version>
         <mysql.version>5.1.40</mysql.version>
@@ -75,6 +75,11 @@
             <artifactId>spring-boot-starter-log4j</artifactId>
             <version>1.3.8.RELEASE</version>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -83,6 +88,14 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+            <!-- war 插件 -->
+            <!--<plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <configuration>
+                    <warName>demo</warName>
+                </configuration>
+            </plugin>-->
         </plugins>
     </build>
 
