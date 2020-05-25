@@ -1,8 +1,8 @@
 package com.haha.pt;
 
-import com.haha.pt.test.dao.SysUserDao;
 import com.haha.pt.test.entity.SysUser;
 import com.haha.pt.test.service.SysUserService;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

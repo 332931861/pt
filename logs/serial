@@ -1,1 +1,10 @@
-2020-05-17 09:47:56 INFO [com.haha.pt.test.web.TestController]: hahaaha
+2020-05-25 21:50:46 INFO [com.haha.pt.test.web.TestController]: session过期时间为86400s
+2020-05-25 21:51:38 INFO [com.haha.pt.test.web.TestController]: session过期时间为120s
+2020-05-25 21:51:57 INFO [com.haha.pt.test.web.TestController]: session过期时间为180s
+2020-05-25 21:52:29 INFO [com.haha.pt.test.web.TestController]: session过期时间为180s
+2020-05-25 21:52:46 INFO [com.haha.pt.test.web.TestController]: session过期时间为180s
+2020-05-25 21:53:11 INFO [com.haha.pt.test.web.TestController]: session过期时间为360s
+2020-05-25 21:53:46 INFO [com.haha.pt.test.web.TestController]: session过期时间为60s
+2020-05-25 21:54:02 INFO [com.haha.pt.test.web.TestController]: session过期时间为120s
+2020-05-25 21:54:24 INFO [com.haha.pt.test.web.TestController]: session过期时间为300s
+2020-05-25 23:35:56 INFO [com.haha.pt.test.web.TestController]: session过期时间为86400s

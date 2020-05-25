@@ -3,10 +3,13 @@ package com.haha.pt.test.web;
 import com.haha.pt.service.impl.MessageProducerServiceImpl;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import javax.servlet.http.HttpServletRequest;
 
 @Controller
 @RequestMapping("/test")
@@ -27,4 +30,13 @@ public class TestController {
         product.sendQueue(msg);
     }
 
+
+    @RequestMapping("/session")
+    @ResponseBody
+    public String testSessionTime(HttpServletRequest request){
+        request.getSession().setMaxInactiveInterval(24 * 60 * 60);
+
+        logger.info("session过期时间为"+request.getSession().getMaxInactiveInterval()+"s");
+        return "success";
+    }
 }
