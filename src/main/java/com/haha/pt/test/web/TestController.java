@@ -23,7 +23,7 @@ public class TestController {
     @ResponseBody
     public String testLogger(){
         logger.info("haha");
-        logger.info("hahaasdf");
+        logger.info("hahaasdfa");
         return "success";
     }
 
