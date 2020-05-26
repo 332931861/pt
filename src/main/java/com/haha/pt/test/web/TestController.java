@@ -22,7 +22,7 @@ public class TestController {
     @RequestMapping("/a")
     @ResponseBody
     public String testLogger(){
-        logger.info("hahaaha");
+        logger.info("ha");
         return "success";
     }
 
