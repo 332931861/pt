@@ -24,7 +24,6 @@ public class TestController {
     public String testLogger(){
         logger.info("haha");
         logger.info("haha");
-        logger.info("haha");
         return "success";
     }
 
