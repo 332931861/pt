@@ -1,6 +1,7 @@
 package com.haha.pt.test.web;
 
 import com.haha.pt.service.impl.MessageProducerServiceImpl;
+import com.mysql.jdbc.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpRequest;
@@ -39,4 +40,20 @@ public class TestController {
         logger.info("session过期时间为"+request.getSession().getMaxInactiveInterval()+"s");
         return "success";
     }
+    @RequestMapping("/exce")
+    @ResponseBody
+    public String testException(HttpServletRequest request){
+        try {
+            String a = "asdfasdf";
+            String b = "1231234";
+            Integer c = Integer.valueOf(b);
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+            logger.error("转换错误");
+        }
+
+
+        return "success";
+    }
+
 }
