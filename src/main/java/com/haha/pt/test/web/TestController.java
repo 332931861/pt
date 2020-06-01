@@ -12,6 +12,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 
+/**
+ * @author zph
+ *
+ */
 @Controller
 @RequestMapping("/test")
 public class TestController {
