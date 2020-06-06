@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 
 /**
  * @author zph
- *
+ * @date 06-06
  */
 @Controller
 @RequestMapping("/test")
@@ -28,6 +28,9 @@ public class TestController {
     public String testLogger(){
         logger.info("haha");
         logger.info("haha");
+        String a = "asdfasdf";
+        String b = "1231234";
+        Integer c = Integer.valueOf(a);
         return "success";
     }
 
