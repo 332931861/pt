@@ -26,12 +26,17 @@ public class TestController {
     @RequestMapping("/a")
     @ResponseBody
     public String testLogger(){
-        logger.info("haha");
-        logger.info("haha");
-        String a = "asdfasdf";
-        String b = "1231234";
-        Integer c = Integer.valueOf(a);
-        return "success";
+        try {
+            logger.info("haha");
+            logger.info("haha");
+            String a = "asdfasdf";
+            String b = "1231234";
+            //Integer c = Integer.valueOf(a);
+            return "success";
+        } catch (NumberFormatException e) {
+            logger.error("error",e);
+            return "error";
+        }
     }
 
     @RequestMapping("/send")
