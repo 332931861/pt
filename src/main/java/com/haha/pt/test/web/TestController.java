@@ -1,6 +1,8 @@
 package com.haha.pt.test.web;
 
 import com.haha.pt.service.impl.MessageProducerServiceImpl;
+import com.haha.pt.test.entity.Teacher;
+import com.haha.pt.test.service.TeacherService;
 import com.mysql.jdbc.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
