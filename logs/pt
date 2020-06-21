@@ -1,2 +1,15 @@
-2020-06-06 09:55:54 INFO [com.haha.pt.test.web.TestController]: haha
-2020-06-06 09:55:54 INFO [com.haha.pt.test.web.TestController]: haha
+2020-06-21 16:03:18 INFO [com.haha.pt.config.ESConfig]: Elasticsearch初始化开始。。。。。
+2020-06-21 16:06:33 INFO [com.haha.pt.config.ESConfig]: Elasticsearch初始化开始。。。。。
+2020-06-21 16:09:12 INFO [com.haha.pt.config.ESConfig]: Elasticsearch初始化开始。。。。。
+2020-06-21 16:09:24 INFO [com.haha.pt.config.ESConfig]: Elasticsearch初始化开始。。。。。
+2020-06-21 16:14:26 INFO [com.haha.pt.config.ESConfig]: Elasticsearch初始化开始。。。。。
+2020-06-21 16:14:35 INFO [com.haha.pt.config.ESConfig]: Elasticsearch初始化开始。。。。。
+2020-06-21 16:16:49 INFO [com.haha.pt.config.ESConfig]: Elasticsearch初始化开始。。。。。
+2020-06-21 16:19:15 INFO [com.haha.pt.config.ESConfig]: Elasticsearch初始化开始。。。。。
+2020-06-21 16:30:20 INFO [com.haha.pt.config.ESConfig]: Elasticsearch初始化开始。。。。。
+2020-06-21 16:31:02 INFO [com.haha.pt.utils.ElasticsearchUtil]: Index [test_index] is not exist!
+2020-06-21 16:31:02 INFO [com.haha.pt.utils.ElasticsearchUtil]: Index [test_index] is not exist!
+2020-06-21 16:31:02 INFO [com.haha.pt.utils.ElasticsearchUtil]: Index is not exits!
+2020-06-21 16:31:02 INFO [com.haha.pt.utils.ElasticsearchUtil]: 执行建立成功？true
+2020-06-21 16:32:56 INFO [com.haha.pt.config.ESConfig]: Elasticsearch初始化开始。。。。。
+2020-06-21 16:33:04 INFO [com.haha.pt.utils.ElasticsearchUtil]: Index [test_index] is exist!

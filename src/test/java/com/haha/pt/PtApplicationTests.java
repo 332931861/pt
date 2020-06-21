@@ -1,3 +1,4 @@
+/*
 package com.haha.pt;
 
 import com.haha.pt.test.dao.TeacherDao;
@@ -40,10 +41,12 @@ class PtApplicationTests {
 
     @Test
     void testMysqlConnect(){
-        /*List<SysUser> sysUsers = sysUserService.queryAll();
+        */
+/*List<SysUser> sysUsers = sysUserService.queryAll();
         for (SysUser sysUser : sysUsers) {
             System.out.println(sysUser);
-        }*/
+        }*//*
+
     }
 
     @Test
@@ -70,13 +73,16 @@ class PtApplicationTests {
     @Test
     void testStu(){
 
-        /*List<Teacher> teachers = teacherDao.queryAll();
+        */
+/*List<Teacher> teachers = teacherDao.queryAll();
         for (Teacher teacher : teachers) {
             System.out.println(teacher);
-        }*/
+        }*//*
+
 
     }
 
 
 
 }
+*/
