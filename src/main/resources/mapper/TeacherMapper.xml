@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.haha.pt.test.dao.TeacherDao">
+
+    <resultMap id="rm" type="com.haha.pt.test.entity.Teacher">
+        <id column="tid" property="id"></id>
+        <result column="tname" property="name"></result>
+        <collection property="list" ofType="com.haha.pt.test.entity.Student">
+            <id column="sid" property="id"></id>
+            <result column="sname" property="name"></result>
+        </collection>
+    </resultMap>
+
+    <select id="queryAll" resultMap="rm">
+        select t.id tid, t.name tname,s.id sid,s.name sname
+        from
+        t_teacher t left join t_student s
+        on t.id = s.tid;
+    </select>
+
+
+</mapper>

@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 /**
  * @author zph
@@ -22,6 +23,9 @@ public class TestController {
     private Logger logger = Logger.getLogger(TestController.class);
     @Autowired
     private MessageProducerServiceImpl product;
+
+    @Autowired
+    private TeacherService teacherService;
 
     @RequestMapping("/a")
     @ResponseBody
@@ -67,6 +71,22 @@ public class TestController {
 
 
         return "success";
+    }
+
+    @RequestMapping("/tea")
+    @ResponseBody
+    void testStu(){
+
+        try {
+            List<Teacher> teachers = teacherService.queryAll();
+            for (Teacher teacher : teachers) {
+                System.out.println(teacher);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            logger.error("",e);
+        }
+
     }
 
 }
