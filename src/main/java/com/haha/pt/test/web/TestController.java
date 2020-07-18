@@ -10,10 +10,12 @@ import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author zph
@@ -77,16 +79,21 @@ public class TestController {
 
     @RequestMapping("/tea")
     @ResponseBody
-    void testStu(){
+    List<Teacher> testStu(String name,Teacher teacher1){
 
         try {
+            System.out.println(name);
+            System.out.println(teacher1);
             List<Teacher> teachers = teacherService.queryAll();
             for (Teacher teacher : teachers) {
                 System.out.println(teacher);
             }
+            return teachers;
+
         } catch (Exception e) {
             e.printStackTrace();
             logger.error("",e);
+            return null;
         }
 
     }

@@ -16,7 +16,13 @@
         select t.id tid, t.name tname,s.id sid,s.name sname
         from
         t_teacher t left join t_student s
-        on t.id = s.tid;
+        on t.id = s.tid
+        where
+        t.name ='zs'
+        and t.status = '0'
+        and s.status = '0'
+        ;
+
     </select>
 
 
