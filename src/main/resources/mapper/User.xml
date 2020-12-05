@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.haha.pt.test.dao.UserDao">
+    <resultMap id="BaseResultMap" type="com.haha.pt.test.entity.User">
+        <id property="id" column="id"/>
+        <result property="userName" column="user_name"/>
+        <result property="age" column="age"/>
+        <result property="phone" column="phone"/>
+        <result property="province" column="province"/>
+        <result property="city" column="city"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateTime" column="update_time"/>
+    </resultMap>
+    <sql id="BaseColumn">
+        id,
+        user_name,
+        age,
+        phone,
+        province,
+        city,
+        create_time,
+        update_time
+    </sql>
+    <select id="selectById" parameterType="String" resultMap="BaseResultMap">
+        SELECT
+        <include refid="BaseColumn"/>
+        FROM
+        user
+        WHERE
+        id = #{id}
+
+    </select>
+
+    <select id="selectByName" parameterType="String" resultMap="BaseResultMap">
+        SELECT
+        <include refid="BaseColumn"/>
+        FROM
+        user
+        WHERE
+        `user_name` = #{userName}
+    </select>
+
+    <select id="selectByNameAndPhone" parameterType="com.haha.pt.test.entity.User" resultMap="BaseResultMap">
+        SELECT
+        <include refid="BaseColumn"/>
+        FROM
+        user
+        WHERE
+        phone = #{phone} AND
+        `user_name` = #{userName}
+
+    </select>
+
+    <select id="selectByNameAndPhoneAndTime" parameterType="com.haha.pt.test.entity.User" resultMap="BaseResultMap">
+        SELECT
+        <include refid="BaseColumn"/>
+        FROM
+        user
+        WHERE
+        `user_name` = #{userName}
+        AND phone = #{phone}
+        AND <![CDATA[  create_time >= #{createTime} ]]>
+        AND <![CDATA[  create_time <= #{createTime} ]]>
+    </select>
+
+    <update id="updateById" parameterType="com.haha.pt.test.entity.User">
+        update
+        user
+        <set>
+            <if test=" userName !=null and userName !='' ">
+                user_name=#{userName},
+            </if>
+            <if test="age!=null">
+                age=#{age},
+            </if>
+            <if test="updateTime!=null ">
+                update_time=#{updateTime}
+            </if>
+        </set>
+        WHERE id=#{id}
+
+    </update>
+
+    <sql id="select">
+        <where>
+            <if test="userName!=null and userName!='' ">
+                user_name like #{userName}
+            </if>
+            <if test="phone !=null  and phone!='' ">
+                AND phone=#{phone}
+            </if>
+            <if test="city !=null  and city!='' ">
+                AND city=#{city}
+            </if>
+            <if test="province !=null  and province!='' ">
+                AND province=#{province}
+            </if>
+            <if test="createTime !=null">
+                AND <![CDATA[  create_time >= #{createTime} ]]>
+            </if>
+    </where>
+    </sql>
+
+    <select id="selectByUser" parameterType="com.haha.pt.test.entity.User" resultMap="BaseResultMap">
+        select
+        <include refid="BaseColumn"/>
+        from
+        user
+        <include refid="select"/>
+    </select>
+
+    <insert id="insertUser" parameterType="com.haha.pt.test.entity.User">
+        insert into user (
+            id,
+            user_name,
+            age,
+            phone,
+            province,
+            city,
+            create_time,
+            update_time
+        )
+        values (
+            #{id},
+            #{userName},
+            #{age},
+            #{phone},
+            #{province},
+            #{city},
+            #{createTime},
+            #{updateTime}
+        )
+    </insert>
+
+</mapper>

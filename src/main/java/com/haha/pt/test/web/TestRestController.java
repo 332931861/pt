@@ -50,6 +50,7 @@ public class TestRestController {
 
 
     public static void main(String[] args) {
+        Map map =new HashMap();
         ExecutorService executorService = newFixedThreadPool(5);
         CountDownLatch latch = new CountDownLatch(10);
         try {

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+    <bean id="zz">
+        <pro >
+            <bean id="12" name="121">
+                <item id="ah1" name="ha1" value="hah1">
+                </item>
+                <item id="ah2" name="ha2" value="hah2">
+                </item>
+            </bean>
+
+        </pro>
+        <item id="ah3" name="ha3" value="hah3">
+        </item>
+    </bean>
+
+
+
+
+</beans>
