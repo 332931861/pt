@@ -10,6 +10,8 @@ import java.util.List;
 
 /**
  * 解析xml
+ * @author zph
+ * @date
  */
 public class Xml {
 
@@ -47,7 +49,35 @@ public class Xml {
 
             }
 
+            List<Element> nodes = rootElement.selectNodes("//bean[@id='12']/item");
+            nodes.forEach(x -> {
+                        String value = x.attributeValue("value");
+                        String name = x.attributeValue("name");
+                        System.out.println(name+" | "+value +" 666");
+                    });
+            List<Element> nodes1 = rootElement.selectNodes("//bean[@id='12']/item/b");
+            nodes1.forEach(x -> {
+                String value = x.attributeValue("value");
+                String name = x.attributeValue("name");
+                System.out.println(name+" | "+value +" 888");
+            });
 
+
+            List<Element> nodes3 = document.selectNodes("//bean[@id='12']/item");
+            nodes3.forEach(x -> {
+                String value = x.attributeValue("value");
+                String name = x.attributeValue("name");
+                System.out.println(name+" | "+value +" 999");
+            });
+
+            List<Element> nodes4 = document.selectNodes("//b[@id='ah6']");
+            nodes4.forEach(x -> {
+                String value = x.attributeValue("value");
+                String name = x.attributeValue("name");
+                System.out.println(name+" | "+value +" 999");
+                String text = x.getText();
+                System.out.println("text "+text);
+            });
 
         } catch (DocumentException e) {
             e.printStackTrace();
